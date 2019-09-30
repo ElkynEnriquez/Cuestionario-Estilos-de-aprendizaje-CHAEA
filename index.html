@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Etiquetas <meta> obligatorias para Bootstrap -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Enlazando el CSS de Bootstrap -->
+        <link rel="stylesheet" href="css/tema-tesis.min.css">
+        
+        <title>Cuestionario HONEY-ALONSO de estilos de aprendizaje</title>
+
+        <!-- Scroll -->
+        <script src="js/smooth-scroll.min.js"></script>
+        <script>
+            smoothScroll.init({
+            selector: '[data-scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
+            selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
+            speed: 2000, // Integer. How fast to complete the scroll in milliseconds
+            easing: 'easeInOutCubic', // Easing pattern to use
+            offset: 0, // Integer. How far to offset the scrolling anchor location in pixels
+            callback: function ( anchor, toggle ) {} // Function to run after scrolling
+            });
+        </script>
+  </head>
+  <body class="text-white">
+    <!-- MENÚ 
+    <div class="container-fluid navbar-fixed-top">
+      <div class="row flex-items-xs-between menu-1 flex-items-xs-middle">
+      </div>
+    </div>
+     FIN MENU -->
+    <!-- SECCIÓN 1 -->
+    <div class="container-fluid slider-1 align-items-center justify-content-center" id="sec-1"><form class="formulario">
+        <div class="container">
+            <!-- Titulo e Instrucciones -->
+            <div class="py-2 py-sm-4 py-md-5"></div>
+            <div class="row pt-5">
+                <div class="col-sm-1"></div>
+                <div class="col-xs-12 col-sm-10">
+                <h3>Cuestionario HONEY-ALONSO de estilos de aprendizaje</h3>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primarioP1" data-toggle="modal" data-target="#instrucciones-test">Instrucciones importantes</button>
+                <!-- Modal -->
+                <div class="modal fade" id="instrucciones-test" tabindex="-1" role="dialog" aria-labelledby="instrucciones-testTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header text-primary">
+                        <h4 class="modal-title" id="instrucciones-testTitle">Antes de responder, ten presente:</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body text-dark">
+                        <ul>
+                            <li>El cuestionario está diseñado para identificar tu estilo preferido de aprender.
+                                NO es un test de inteligencia, ni de personalidad.</li>
+                            <li>No hay límite de tiempo.</li>
+                            <li>Ninguna respuesta es correcta o errónea.
+                                Es útil en la medida que seas sincero/a en tus respuestas.</li>
+                            <li>Si estás más de acuerdo que en desacuerdo con una sentencia marca (Si), por el contrario, si estás más en desacuerdo que de acuerdo, pon un (No).</li>
+                            <li>Por favor contesta a todas las sentencias.</li>
+                        </ul>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Entiendo</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal -->
+                </div>
+                <div class="col-sm-1"></div>
+            </div>
+            <div class="row dPreguntas justify-content-center"> 
+                <!-- Pregunta 1 -->
+                <div class="row form-group justify-content-center" id="p1">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>1. Tengo fama de decir lo que pienso claramente y sin rodeos.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p1" id="si1" value="1" irApreg="2" class="radiop">
+                            <label for="si1">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p1" id="no1" value="0" irApreg="2" class="radiop">
+                            <label for="no1">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div> <!-- nueva linea -->
+                <!-- Pregunta 2 -->
+                <div class="row form-group justify-content-center" id="p2">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>2. Estoy seguro/a de lo que es bueno y lo que es malo, lo que está bien y lo que está mal.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p2" id="si2" value="1" irApreg="3" class="radiop">
+                            <label for="si2">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p2" id="no2" value="0" irApreg="3" class="radiop">
+                            <label for="no2">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 3 -->
+                <div class="row form-group justify-content-center" id="p3">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>3. Muchas veces actúo sin mirar las consecuencias.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p3" id="si3" value="1" irApreg="4" class="radiop">
+                            <label for="si3">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p3" id="no3" value="0" irApreg="4" class="radiop">
+                            <label for="no3">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 4 -->
+                <div class="row form-group justify-content-center" id="p4">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>4. Normalmente trato de resolver los problemas metódicamente y paso a paso. </h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p4" id="si4" value="1" irApreg="5" class="radiop">
+                            <label for="si4">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p4" id="no4" value="0" irApreg="5" class="radiop">
+                            <label for="no4">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 5 -->
+                <div class="row form-group justify-content-center" id="p5">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>5. Creo que los formalismos coartan y limitan la actuación libre de las personas.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p5" id="si5" value="1" irApreg="6" class="radiop">
+                            <label for="si5">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p5" id="no5" value="0" irApreg="6" class="radiop">
+                            <label for="no5">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 6 -->
+                <div class="row form-group justify-content-center" id="p6">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>6. Me interesa saber cuáles son los sistemas de valores de los demás y con qué criterios actúan.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p6" id="si6" value="1" irApreg="7" class="radiop">
+                            <label for="si6">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p6" id="no6" value="0" irApreg="7" class="radiop">
+                            <label for="no6">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 7 -->
+                <div class="row form-group justify-content-center" id="p7">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>7. Pienso que el actuar intuitivamente puede ser siempre tan válido como actuar reflexivamente.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p7" id="si7" value="1" irApreg="8" class="radiop">
+                            <label for="si7">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p7" id="no7" value="0" irApreg="8" class="radiop">
+                            <label for="no7">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 8 -->
+                <div class="row form-group justify-content-center" id="p8">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>8. Creo que lo más importante es que las cosas funcionen.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p8" id="si8" value="1" irApreg="9" class="radiop">
+                            <label for="si8">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p8" id="no8" value="0" irApreg="9" class="radiop">
+                            <label for="no8">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 9 -->
+                <div class="row form-group justify-content-center" id="p9">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>9. Procuro estar al tanto de lo que ocurre aquí y ahora</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p9" id="si9" value="1" irApreg="10" class="radiop">
+                            <label for="si9">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p9" id="no9" value="0" irApreg="10" class="radiop">
+                            <label for="no9">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 10 -->
+                <div class="row form-group justify-content-center" id="p10">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>10. Disfruto cuando tengo tiempo para preparar mi trabajo y realizarlo a conciencia.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p10" id="si10" value="1" irApreg="11" class="radiop">
+                            <label for="si10">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p10" id="no10" value="0" irApreg="11" class="radiop">
+                            <label for="no10">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 11 -->
+                <div class="row form-group justify-content-center" id="p11">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>11. Estoy a gusto siguiendo un orden en las comidas, en el estudio, haciendo ejercicio regularmente.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p11" id="si11" value="1" irApreg="12" class="radiop">
+                            <label for="si11">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p11" id="no11" value="0" irApreg="12" class="radiop">
+                            <label for="no11">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 12 -->
+                <div class="row form-group justify-content-center" id="p12">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>12. Cuando escucho una nueva idea enseguida comienzo a pensar cómo        ponerla en práctica.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p12" id="si12" value="1" irApreg="13" class="radiop">
+                            <label for="si12">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p12" id="no12" value="0" irApreg="13" class="radiop">
+                            <label for="no12">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 13 -->
+                <div class="row form-group justify-content-center" id="p13">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>13. Prefiero las ideas originales y novedosas aunque no sean prácticas.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p13" id="si13" value="1" irApreg="14" class="radiop">
+                            <label for="si13">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p13" id="no13" value="0" irApreg="14" class="radiop">
+                            <label for="no13">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 14 -->
+                <div class="row form-group justify-content-center" id="p14">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>14. Admito y me ajusto a las normas sólo si me sirven para lograr mis objetivos.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p14" id="si14" value="1" irApreg="15" class="radiop">
+                            <label for="si14">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p14" id="no14" value="0" irApreg="15" class="radiop">
+                            <label for="no14">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 15 -->
+                <div class="row form-group justify-content-center" id="p15">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>15. Normalmente encajo bien con personas reflexivas, y me cuesta sintonizar con personas demasiado espontáneas, imprevisibles.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p15" id="si15" value="1" irApreg="16" class="radiop">
+                            <label for="si15">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p15" id="no15" value="0" irApreg="16" class="radiop">
+                            <label for="no15">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 16 -->
+                <div class="row form-group justify-content-center" id="p16">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>16. Escucho con más frecuencia que hablo. </h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p16" id="si16" value="1" irApreg="17" class="radiop">
+                            <label for="si16">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p16" id="no16" value="0" irApreg="17" class="radiop">
+                            <label for="no16">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 17 -->
+                <div class="row form-group justify-content-center" id="p17">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>17. Prefiero las cosas estructuradas a las desordenadas</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p17" id="si17" value="1" irApreg="18" class="radiop">
+                            <label for="si17">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p17" id="no17" value="0" irApreg="18" class="radiop">
+                            <label for="no17">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 18 -->
+                <div class="row form-group justify-content-center" id="p18">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>18. Cuando poseo cualquier información, trato de interpretarla bien antes de manifestar alguna conclusión.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p18" id="si18" value="1" irApreg="19" class="radiop">
+                            <label for="si18">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p18" id="no18" value="0" irApreg="19" class="radiop">
+                            <label for="no18">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 19 -->
+                <div class="row form-group justify-content-center" id="p19">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>19. Antes de hacer algo estudio con cuidado sus ventajas e inconvenientes.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p19" id="si19" value="1" irApreg="20" class="radiop">
+                            <label for="si19">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p19" id="no19" value="0" irApreg="20" class="radiop">
+                            <label for="no19">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+                <!-- Pregunta 20 -->
+                <div class="row form-group justify-content-center" id="p20">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>20. Me entusiasmo con el reto de hacer algo nuevo y diferente.</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <div class="grupoRadios">
+                            <input type="radio" name="p20" id="si20" value="1" irApreg="121" class="radiop">
+                            <label for="si20">Si</label>
+                            <div class="separaSN"></div>
+                            <input type="radio" name="p20" id="no20" value="0" irApreg="121" class="radiop">
+                            <label for="no20">No</label>
+                        </div>
+                    </div>
+                </div><div class="w-100"></div>
+            <!--</div> -->
+                <div class="row justify-content-center" id="p121">
+                    <div class="col-12 col-md-9 col-lg-10"><h6>No queremos que te aburras</h6></div>
+                    <div class="col-8 col-md-3 col-lg-2 pt-1">
+                        <a data-scroll href="#sec-2" class="btn btn-danger" role="button" aria-pressed="true">Distraer</a>
+                    </div>
+                </div>
+        </div> 
+      </div>
+    </form>
+    </div>
+    <!-- FIN SECCIÓN -->
+
+    <!-- SECCIÓN 2 -->
+    <div class="container-fluid">
+      <div class="row flex-items-xs-center slider-2 flex-items-xs-middle" id="sec-2" >
+        <div class="row">
+          <div class="col-xs-12"><h1>Desarrollado con Bootstrap 4 beta</h1></div>
+          <div class="col-xs-12"><h3>Sección 2</h3></div>
+            <div class="col-xs-2">
+          <a data-scroll href="#sec-3" class="btn btn-danger" role="button" aria-pressed="true">Sección-3</a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN SECCIÓN -->
+
+    <!-- SECCIÓN 3 -->
+    <div class="container-fluid">
+      <div class="row flex-items-xs-center slider-3 flex-items-xs-middle" id="sec-3" >
+        <div class="row">
+          <div class="col-xs-12"><h1>Además de Flexbox</h1></div>
+          <div class="col-xs-12"><h3>Sección 3</h3></div>
+            <div class="col-xs-2">
+          <a data-scroll href="#sec-4" class="btn btn-danger" role="button" aria-pressed="true">Sección-4</a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN SECCIÓN -->
+
+    <!-- SECCIÓN 4 -->
+    <div class="container-fluid">
+      <div class="row flex-items-xs-center slider-4 flex-items-xs-middle" id="sec-4" >
+        <div class="row">
+          <div class="col-xs-12"><h1>Suscríbete en Youtube (bluuweb)</h1></div>
+          <div class="col-xs-12"><h3>Sección 4</h3></div>
+        <div class="col-xs-2">
+          <a data-scroll href="#sec-1" class="btn btn-danger" role="button" aria-pressed="true">Sección-1</a>
+        </div>
+        </div>
+      </div>
+    </div>
+    <!-- FIN SECCIÓN -->
+    
+    <!-- FOOTER -->
+    <div class="container-fluid footer">
+      <div><h6>Desarrollado por Ignacio Gutiérrez</a></h6></div>
+    </div>
+    <!-- FIN FOOTER -->
+
+    <!-- Opcional: enlazando el JavaScript de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
+     <script>
+    $(document).ready(function() {
+        //$('#instrucciones-test').modal('show')
+        for(var i=3;i<=21;i++){
+            $('#p'+i).hide();
+        }
+        $('#p121').hide();
+        var altoP1= $('#p1').height();
+        $('#p1').show();
+        $('#p2').show();
+        // inicia conteo de las preguntas respondidas
+        var preguntas=1;
+        
+    $('.radiop').click(function() {
+        event.preventDefault();
+        //var ir = jQuery(this).attr('irApreg');
+        //obtenemos el id de la pregunta respondida restando 1 al atributo ir a pregunta
+        var idPMedio = (parseInt($(this).attr('irApreg'), 10))-1;
+        if (idPMedio==120 && (idPMedio-100)>preguntas){
+            alert("Por favor responda la pregunta "+(idPMedio-101));
+        }
+        else if (idPMedio==120 && (idPMedio-100)<preguntas){
+            //Se establece la pregunta como respondida y se cambia el estilo de la nueva respuesta (si o no)
+            $('.grupoRadios').addClass("checked");
+            $('#no'+(idPMedio-100)).removeClass("radioOn");
+            $('#si'+(idPMedio-100)).removeClass("radioOn");
+            $(this).addClass("radioOn");
+        }
+        else if (idPMedio==120 && (idPMedio-100)==preguntas){
+            $(this).addClass("radioOn");
+            preguntas++;
+            $('#p'+(idPMedio+1)).slideDown(500); // muestra pregunta siguiente
+            $('#p'+(idPMedio-101)).slideUp(500); //Se oculta pregunta anterior
+        }
+        
+        // Si la pregunta respondida es mayor a la cuenta de las preguntas con respuesta, Quiere decir que esta saltando una pregunta
+        else if (idPMedio>preguntas) {
+            //se pide una respuesta a la pregunta saltada y no se permmite responder la siguiente
+            alert("Por favor responda la pregunta "+(idPMedio-1));
+        }
+        // Si la pregunta respondida es menor a la cuenta de las preguntas con respuesta, quiere decir que esta cambiando una respuesta anterior
+        else if (idPMedio<preguntas) {
+            //Se establece la pregunta como respondida y se cambia el estilo de la nueva respuesta (si o no)
+            $('.grupoRadios').addClass("checked");
+            $('#no'+idPMedio).removeClass("radioOn");
+            $('#si'+idPMedio).removeClass("radioOn");
+            $(this).addClass("radioOn");
+        }
+        // Si la pregunta respondida es igual a la cuenta de las preguntas con respuesta, se oculta la anterior y se muestra la nueva pregunta
+        else if (idPMedio==preguntas && idPMedio!=20) {
+            $(this).addClass("radioOn");
+            preguntas++;
+            // Si la pregunta es la 2 o siguientes, oculta la pregunta si es la primera la ubica en la parte superior
+            if (idPMedio>1){
+                var idPSuperior=idPMedio-1;
+                for (var i=1;i<=idPSuperior;i++){
+                    $('#p'+i).slideUp(500); //Se oculta pregunta anterior
+                }
+            }
+            //Si es menor o igual a la pregunta 19 muestra la siguiente pregunta
+            var idPInferior=idPMedio;
+            if (idPInferior<19) {
+                idPInferior = idPMedio+1;
+                var idPproxima = idPInferior+1;
+                $('#p'+idPproxima).slideDown(500); // muestra pregunta siguiente
+            }
+             return false;
+        }
+    });
+    });
+    </script>
+  </body>
+</html>

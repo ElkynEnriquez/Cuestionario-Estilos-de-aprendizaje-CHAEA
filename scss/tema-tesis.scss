@@ -1,0 +1,10 @@
+/*! Bootstrap 4 Theme
+ *
+ *  Primero se incluye declaran ,las variables personalizadas
+ *  Se llama los componentes bootstrap, y por !default  adapata las variables personalizadas al mapa de bootstrap
+ *  al final se añaden estilos personalizados
+ */
+
+@import 'custom-variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import 'custom-styles';

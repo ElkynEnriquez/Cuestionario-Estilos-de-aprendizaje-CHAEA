@@ -1,0 +1,166 @@
+// Add additional styles here. For example, overwrite certain styles or add new components.
+// Tip: You can use bootstrap's powerful mixins here!
+
+.btn{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.dPreguntas {
+    height: 50vh;
+    padding-top: 10vh;
+    align-items: center;
+}
+.slider-1, .slider-2, .slider-3, .slider-4{
+	min-height: 100vh;
+    /*height: 50vh;*/
+	text-align: center;
+    vertical-align: middle ;
+}
+.slider-1{
+	/*background: #700961;*/
+    background: -webkit-linear-gradient(left, #FF4E50 , #F9D423); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #FF4E50, #F9D423); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #FF4E50, #F9D423); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #FF4E50 , #F9D423); /* Standard syntax */
+}
+.slider-2{
+	background: #b80d57;
+}
+.slider-3{
+	background: #e03e36;
+}
+.slider-4{
+	background: #ff7c38;
+}
+
+.formulario {
+  /* --------------------------------------- */
+  /* ----- Radio Button */
+  /* --------------------------------------- */
+  /* --------------------------------------- */
+  /* ----- Checkbox */
+  /* --------------------------------------- */ }
+.formulario .grupoRadios{
+    /*width: 152px;*/
+    width: 100%;
+    min-width: 120px;
+    height: 32px;
+    background: #e7e7e7;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    appearance: none;
+    position: relative;
+    border-radius:20px; //IE 11
+    -moz-border-radius:20px; //Mozilla
+    -webkit-border-radius:20px; //Chrome and Safari
+}
+.formulario .grupoRadios:before{
+    content: ' ';
+    position: absolute;
+    left: 0.5%;
+    top: 1px;
+    /*    width: 150px;*/
+    width: 99%;
+    height: 30px;
+    background: #ffffff;
+    z-index: 1;
+    border-radius:20px; //IE 11
+    -moz-border-radius:20px; //Mozilla
+    -webkit-border-radius:20px; //Chrome and Safari
+}
+
+.formulario .grupoRadios .separaSN{
+    position: absolute;
+    display: inline-block;
+    left: 50%;
+    top: 6px;
+    width: 1px;
+    height: 20px;
+    background: #FF4136;
+    z-index: 3;
+}
+
+  .formulario .grupoRadios label{
+    display: inline-block;    
+    cursor: pointer;
+    color: #FF4136;
+    position: relative;
+      width: 36%;
+      height: 30px;
+      top: 1px;
+    padding: 2px 10px 5px 10px;
+      /*margin: 0 5px;*/
+    font-size: 1em;
+      z-index: 4;
+    border-radius:16px; //IE 11
+    -moz-border-radius:16px; //Mozilla
+    -webkit-border-radius:16px; //Chrome and Safari
+      
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+
+    .formulario .grupoRadios label:hover{
+      background: rgba(255, 65, 54, 0.3); }
+/* radiobutton */
+  .formulario .grupoRadios input[type="radio"] {
+    display: none; }
+    .formulario .grupoRadios input[type="radio"]:checked + label:before{
+      display: none; }
+
+.formulario .grupoRadios .radioOn + label {
+    
+        width: 60%;
+      /*padding: 5px 30px;  ancho chequeado */
+      background: #FF4136;
+      border-radius: 20px;
+      color: #fff; 
+    }
+
+/* -------------------------- fin -----   estilos ---------------*/
+
+
+
+@include media-breakpoint-up(xs) {
+  html {
+    font-size: 1.2rem;
+  }
+    .fontSizeComponente {
+        font-size: 3rem;
+    }
+}
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+    .fontSizeComponente {
+        font-size: 2.6rem;
+    }
+}
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.1rem;
+  }
+    .fontSizeComponente {
+        font-size: 4rem;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.1rem;
+  }
+    .fontSizeComponente {
+        font-size: 2rem;
+    }
+}
+@include media-breakpoint-up(xl) {
+  html {
+    font-size: 1rem;
+  }
+    .fontSizeComponente {
+        font-size: 2rem;
+    }
+}
