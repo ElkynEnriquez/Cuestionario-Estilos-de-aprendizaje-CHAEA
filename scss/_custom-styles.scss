@@ -8,30 +8,31 @@
 
 .dPreguntas {
     height: 50vh;
-    padding-top: 10vh;
     align-items: center;
 }
-.slider-1, .slider-2, .slider-3, .slider-4{
+.slider-1, .slider-2, .slider-3 {
 	min-height: 100vh;
     /*height: 50vh;*/
 	text-align: center;
     vertical-align: middle ;
 }
 .slider-1{
-	/*background: #700961;*/
     background: -webkit-linear-gradient(left, #FF4E50 , #F9D423); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(right, #FF4E50, #F9D423); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(right, #FF4E50, #F9D423); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, #FF4E50 , #F9D423); /* Standard syntax */
 }
 .slider-2{
-	background: #b80d57;
+    background: -webkit-linear-gradient(left, #00B4DB , #0083B0); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #00B4DB, #0083B0); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #00B4DB, #0083B0); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #00B4DB , #0083B0); /* Standard syntax */
 }
 .slider-3{
-	background: #e03e36;
-}
-.slider-4{
-	background: #ff7c38;
+	background: -webkit-linear-gradient(left, #4b6cb7 , #182848); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #4b6cb7 , #182848); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #4b6cb7 , #182848); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #4b6cb7 , #182848); /* Standard syntax */
 }
 
 .tabla-mem{
@@ -110,9 +111,11 @@
       background: rgba(255, 65, 54, 0.3); }
 /* radiobutton */
   .formulario .grupoRadios input[type="radio"] {
-    display: none; }
+    display: none; 
+}
     .formulario .grupoRadios input[type="radio"]:checked + label:before{
-      display: none; }
+    display: none; 
+} 
 
 .formulario .grupoRadios .radioOn + label {
     
@@ -125,45 +128,34 @@
 
 /* -------------------------- fin -----   estilos ---------------*/
 
-
-
 @include media-breakpoint-up(xs) {
-  html {
-    font-size: 1.2rem;
-  }
+  // html { font-size: 1.2rem; }
     .fontSizeComponente {
         font-size: 3rem;
     }
 }
 @include media-breakpoint-up(sm) {
-  html {
-    font-size: 1.2rem;
-  }
+  //html {   font-size: 1.2rem;  }
     .fontSizeComponente {
         font-size: 2.6rem;
     }
+    
 }
 @include media-breakpoint-up(md) {
-  html {
-    font-size: 1.1rem;
-  }
+  //html {    font-size: 1.1rem;  }
     .fontSizeComponente {
         font-size: 4rem;
     }
 }
 
 @include media-breakpoint-up(lg) {
-  html {
-    font-size: 1.1rem;
-  }
+  //html {    font-size: 1.1rem;  }
     .fontSizeComponente {
         font-size: 2rem;
     }
 }
 @include media-breakpoint-up(xl) {
-  html {
-    font-size: 1rem;
-  }
+  //html {    font-size: 1rem;  }
     .fontSizeComponente {
         font-size: 2rem;
     }

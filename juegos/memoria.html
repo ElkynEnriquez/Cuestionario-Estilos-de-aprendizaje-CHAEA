@@ -13,15 +13,15 @@
   </head>
 <body class="text-white">
     <!-- SECCIÓN 1 -->
-    <div class="container-fluid slider-1 align-items-center justify-content-center" id="sec-1">
+    <div class="container-fluid slider-2 align-items-center justify-content-center" id="sec-2">
         <div class="container h-100">
-            <div class="row pt-md-4 pt-3">
-                <div class="col-md-1"></div>
+            <div class="row pt-md-4 pt-3 justify-content-center">
+                <div class="col-auto"></div>
                 <div class="col-xs-12 col-md-10">
-                    <h2>Matriz de memoria</h2>
+                    <h3>Matriz de memoria</h3>
                 </div>
-                <div class="col-md-1"></div>
-                <!-- Modal -->
+                <div class="col-auto"></div>
+                <!-- Modal Instrucciones-->
                 <div class="modal fade" id="instrucciones-juego-1" tabindex="-1" role="dialog" aria-labelledby="instrucciones-juego1Title" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
@@ -37,93 +37,92 @@
                     </div>
                   </div>
                 </div>
-                <!-- Modal -->
+                <!-- Fin Modal Instrucciones -->
             </div>
-            <div class="row pt-4 pt-md-2 pt-lg-1">
-                <div class="col-md-1"></div>
-                <div class="col-xs-12 col-md-10" id="tab1" cuadros="3"></div>
-                <div class="col-md-1"></div>
+            <div class="row pt-4 pt-md-2 pt-lg-1 justify-content-center">
+                <div class="col-auto"></div>
+                <div class="col-xs-12 col-md-10" id="tab1"></div>
+                <div class="col-auto"></div>
             </div>
-            <div class="row pb-2" id="intro1" style="margin-top: -10px">
-                <div class="col-md-1"></div>
-                <div class="col-xs-12 col-md-10">La solución correcta sería:</div>
-                <div class="col-md-1"></div>
+            <div class="row pb-0 justify-content-center" id="intro1" style="margin-top: -10px">
+                <div class="col-auto"></div>
+                <div class="col-xs-12 col-md-10"><h5>La solución correcta sería:</h5></div>
+                <div class="col-auto"></div>
             </div>
-            <div class="row" id="intro2">
-                <div class="col-md-1"></div>
+            <div class="row justify-content-center" id="intro2">
+                <div class="col-auto"></div>
                 <div class="col-xs-12 col-md-10" id="tab2"></div>
-                <div class="col-md-1"></div>
+                <div class="col-auto"></div>
             </div>
-            <div class="row pb-3" id="intro3">
-                <div class="col-md-1"></div>
+            <div class="row pb-3 justify-content-center" id="intro3">
+                <div class="col-auto"></div>
                 <div class="col-xs-12 col-md-10">
                     <button type='button' class='btn btn-primarioP1' id='btn-comenzarJ1'> Jugar </button>
                 </div>
-                <div class="col-md-1"></div>
+                <div class="col-auto"></div>
             </div>
             <div class="row justify-content-center" id="divResultados">
             <div class="col-12">
-                <!-- Flexbox container for aligning the toasts -->
-                <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="position: relative; min-height: 200px;">
-                    <!-- Position it -->
-                    <div style=" top: 0; right: 0;">
-                        <!-- Then put toasts within -->
-                    <div id="tBien" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay= "3000" style="min-width: 400px;">
-                    <div class="toast-header">
-                        <img src="bien.svg" alt="Bien" style="height: 50px;">
-                        <strong class="mr-auto ml-3">Muy bien!</strong>
-                        <small id="nivelB"></small>
-                    </div>
-                    <div class="toast-body">
-                        <p class="text-dark">Subes de nivel +</p>
-                    </div>
-                  </div>
-                    <div id="tMal" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide= "false" style="min-width: 400px;">
-                    <div class="toast-header">
-                        <img src="error.svg" alt="Mal" style="height: 50px;">
-                        <strong class="mr-auto ml-3">Fallaste :(</strong>
-                        <small id="nivelM"></small>
-                    </div>
-                    <div class="toast-body">
-                        <p class="text-dark">¿Que deseas hacer?</p>
-                        <div class="col-12">
-                            <button id="nuevoIntento" type="button" class="btn btn-outline-primarioP1" data-dismiss="modal">Intentar de nuevo</button>
-                            <a data-scroll href="#sec-3" class="btn btn-primarioP1 text-white" role="button" aria-pressed="true">Continuar Test</a>
+            <!-- Flexbox container for aligning the toasts -->
+            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="position: relative; min-height: 200px;">
+                <!-- Position it -->
+                <div style=" top: 0; right: 0;">
+                    <!-- Toast - notificación siguiente nivel -->
+                    <div id="tBien" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay= "2000" style="min-width: 100%;">
+                        <div class="toast-header px-3 px-md-4">
+                            <img src="recursos/bien.svg" alt="Bien" style="height: 40px;">
+                            <strong class="mr-auto ml-3">Muy bien!</strong>
+                            <span id="nivelB"></span>
                         </div>
                     </div>
-                  </div>
+                    <!-- FINAL Toast - notificación siguiente nivel -->
+                    <!-- Toast - notificación GameOver -->
+                    <div id="tMal" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-autohide= "false" style="min-width: 100%;">
+                        <div class="toast-header px-3 px-md-4">
+                            <img src="recursos/error.svg" alt="Mal" style="height: 40px;">
+                            <strong class="mr-auto ml-3">Fallaste :(</strong>
+                            <span id="nivelM"></span>
+                        </div>
+                        <div class="toast-body">
+                            <div class="col-12 text-dark">
+                                ¿Que deseas hacer?
+                                <button id="nuevoIntento" type="button" class="btn btn-outline-primarioP1 ml-2" data-dismiss="modal">Intentar de nuevo</button>
+                                <a href="#sec-3" class="continuar-test btn btn-primarioP1 text-white" role="button" aria-pressed="true">Continuar Test</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FINAL Toast - notificación GameOver -->
                 </div>
-                </div>
-                <div class="col-12 mb-5" id="finJuego" style="margin-top: -100px;">
-                    <h4>!WOW¡ Has terminado el juego :O</h4>
-                    <a data-scroll href="#sec-3" class="btn btn-primarioP1 text-white" role="button" aria-pressed="true">Continuar Test</a>
-                </div>
+            </div>
+            <div class="col-12 mb-5" id="finJuego" style="margin-top: -100px;">
+                <h4>!WOW¡ Has terminado el juego :O</h4>
+                <a href="#sec-3" class="continuar-test btn btn-primarioP1 text-white" role="button" aria-pressed="true">Continuar Test</a>
+            </div>
             </div>
             </div>
         </div>
       </div>
     
-    <!-- Opcional: enlazando el JavaScript de Bootstrap -->
+    <!-- Jquery, Popper y JavaScript de Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <!--<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>-->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    <!-- Script Juego -->
     <script>
         var nivel=2;
         var intentos=nivel;
         var cuadros=3;
         var segundos=3;
         var activos=[2,3,4];
-        var repeticion=2;
+        var repeticion=1;
         $(document).ready(function(){
                 $('#finJuego').hide();
                 $('#divResultados').hide();
                 $('#instrucciones-juego-1').modal('show');                
                 cargarTablero("tab1", "muestra", true);
                 cargarTablero("tab2", "muestra",true);
-            });
+        });
         
         $('#btn-comenzarJ1').on('click',function(e){
                 $('#intro1').fadeOut();
@@ -133,25 +132,48 @@
             });
         $('#nuevoIntento').on('click', function(e){
             if (repeticion>0){
-                if (nivel>2)
+                if (nivel>2) {
                     nivel--;
+                }
                 cargarNivel();
                 repeticion--;
             }
             if (repeticion==0)
                 $(this).hide();
         });
+        $('.continuar-test').on('click',function(e){
+            window.parent.scrollSeccion($(this).attr('href'));
+            //window.parent.scrollSeccion("#sec-3");
+        })
         
         function cargarNivel(){
-            $('#nivelB,#nivelM').html("Nivel: "+nivel);
+            $('#nivelB,#nivelM').html("Nivel: <b>"+nivel+"</b>");
             $('#divResultados').hide();
             activos=[];
-            generarAleatorios();
-            buscarRepetido(activos);
             intentos=nivel;
+            switch (nivel) {
+                case 2: case 3:
+                        cuadros=3;
+                        break;
+                case 4: case 5:
+                        cuadros=4;
+                        break;
+                case 6: case 7:
+                        cuadros=5;
+                        break;
+                case 8: case 9:
+                        cuadros=6;
+                        break;
+                case 10: case 11:
+                        cuadros=7;
+                        break;
+                default:
+                        cuadros=8;
+            }
+            generarAleatorios();
             cargarTablero("tab1", "muestra",true);
             var tiempo = setInterval(function(){
-                    audio = new Audio("tic.mp3")
+                    audio = new Audio("recursos/tic.mp3")
                     if (segundos>0 && segundos<=3){
                         audio.pause();
                         audio.play();
@@ -166,30 +188,6 @@
         }
         
         function cargarTablero(tablero, modo, tutorial=false){   
-                switch (nivel) {
-                    case 2:
-                    case 3:
-                        cuadros=3;
-                        break;
-                    case 4:
-                    case 5:
-                        cuadros=4;
-                        break;
-                    case 6:
-                    case 7:
-                        cuadros=5;
-                        break;
-                    case 8:
-                    case 9:
-                        cuadros=6;
-                        break;
-                    case 10:
-                    case 11:
-                        cuadros=7;
-                        break;
-                    default:
-                        cuadros=8;
-                }
                 var col=cuadros;
                 var fil=cuadros; 
                 var cuadroActual=1;
@@ -243,11 +241,13 @@
                             else {
                                 $('#tBien').toast('show');
                                 nivel++;
-                                setTimeout(cargarNivel,1500);
+                                setTimeout(cargarNivel,2300);
                             }
                         } 
-                        else 
+                        else {
+                            cargarTablero("tab1", "muestra",true);
                             $('#tMal').toast('show');
+                        }
                     }
                 });
         }
@@ -256,6 +256,7 @@
                 while (activos.length<nivel){
                     activos.push(Math.floor((Math.random() * (cuadros*cuadros)) + 1));
                 }
+                buscarRepetido(activos);
             }
         
         function buscarRepetido(arreglo){

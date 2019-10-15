@@ -1,0 +1,203 @@
+﻿<!doctype html>
+<html lang="es">
+    <head>
+        <!-- Etiquetas <meta> obligatorias para Bootstrap -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Enlazando el CSS de Bootstrap -->
+        <link rel="stylesheet" href="../css/tema-tesis.min.css">
+        <title>Cuestionario HONEY-ALONSO de estilos de aprendizaje</title>
+  </head>
+<body class="text-white">
+    <!-- SECCIÓN 1 -->
+    <div class="container-fluid slider-3 align-items-center justify-content-center" id="sec-4">
+        <div class="container h-100">
+            <div class="row pt-md-5 pt-4 justify-content-center">
+                <p id="tiempoJ2">Tiempo</p>
+                <div class="w-100"></div>
+                <div class="col-auto"></div>
+                <div class="col-xs-12 col-md-10">
+                    <h2>Velocidad de la mente</h2>
+                </div>
+                <div class="col-auto"></div>
+                <!-- Modal instrucciones-->
+                <div class="modal fade" id="instrucciones-juego-2" tabindex="-1" role="dialog" aria-labelledby="instrucciones-juego2Title" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header text-primary">
+                        <h4 class="modal-title text-primarioTazul" id="instrucciones-juego2Title">Instrucciones:</h4>
+                      </div>
+                      <div class="modal-body text-dark" style="text-align: left;">
+                          Debes recordar el símbolo actual y contestar si coincide con el anterior.<br>
+                          Responde rápidamente y evita cometer errores.
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-primarioTazul" data-dismiss="modal" id="comenzarJuego2">Entiendo</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Modal -->
+            </div>
+            <div class="row pt-4 pt-md-2 pt-lg-1 justify-content-center">
+                <div class="col-auto"></div>
+                <div class="col-6 col-md-4 col-lg-3 py-4">
+                    <!-- aqui tarjetas -->
+                    <img src="recursos/simbolo.svg" width="100%" id="tarjeta" style="display: none">
+                    <img src="recursos/simbolo1.svg" width="100%" id="tarjeta1" data-valor="1">
+                    <img src="recursos/simbolo2.svg" width="100%" id="tarjeta2" data-valor="2" style="display: none">
+                    <img src="recursos/simbolo3.svg" width="100%" id="tarjeta3" data-valor="3" style="display: none">
+                    <img src="recursos/simbolo4.svg" width="100%" id="tarjeta4" data-valor="4" style="display: none">
+                </div>
+                <div class="col-auto"></div>
+            </div>
+            <div class="row pb-3 justify-content-center" id="controles">
+                <button type='button' class='btn btn-primarioTazul' id='btn-comenzar' > Comenzar</button>
+                <div class="w-100"></div>
+                <div class="col-auto"></div>
+                <div class="col-5 col-md-3 col-lg-2">
+                    <button type='button' class='btn btn-primarioTazul' id='btn-siJ2' style="width: 100%; display: none"> Si </button>
+                </div>
+                <div class="col-5 col-md-3 col-lg-2">
+                    <button type='button' class='btn btn-primarioTazul' id='btn-noJ2' style="width: 100%; display: none"> No </button>
+                </div>
+                <div class="col-auto"></div>
+            </div>
+            <div class="row justify-content-center" id="divResultadosJ2">
+            <div class="col-12">
+            <!-- Flexbox container for aligning the toasts -->
+            <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="position: relative; min-height: 100px;">
+                <!-- Position it -->
+                <div style=" top: 0; right: 0;">
+                    <!-- Toast - notificación siguiente nivel -->
+                    <div id="tBienJ2" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay= "400" style="min-width: 100%;">
+                        <div class="toast-header px-3 px-md-4">
+                            <img src="recursos/bien.svg" alt="Bien" style="height: 50px;">
+                            <strong class="mr-auto ml-3">Correcto</strong>
+                        </div>
+                    </div>
+                    <!-- FINAL Toast - notificación siguiente nivel -->
+                    <!-- Toast - notificación GameOver -->
+                    <div id="tMalJ2" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay= "400" style="min-width: 100%;">
+                        <div class="toast-header px-3 px-md-4">
+                            <img src="recursos/error.svg" alt="Mal" style="height: 50px;">
+                            <strong class="mr-auto ml-3">Error</strong>
+                        </div>
+                    </div>
+                    <!-- FINAL Toast - notificación GameOver -->
+                </div>
+            </div>
+            </div>
+            </div>
+            <div class="row pb-3 justify-content-center" id="finJuego">
+                <div class="col-12 mb-5" style="margin-top: -100px;">
+                    <h4> Juego terminado</h4>
+                    <p id="puntuacionJ2">Tuviste   aciertos de   posibles</p>
+                    <a href="#sec-5" class="continuar-test btn btn-primarioTazul text-white" role="button" aria-pressed="true">Continuar Test</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+    <!-- Opcional: enlazando el JavaScript de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
+    
+    <!-- javascript ~ jquery -->
+    <script>
+            var numero=0;
+            var segundos=45;
+            var aciertos=0;
+            var tarjetaAnteriorJ2=1;
+            var tarjetaActualJ2=1;
+        
+            $(document).ready(function(){
+                $('#tiempoJ2').html("Tiempo: "+segundos+" seg");
+                $('#instrucciones-juego-2').modal('show');
+                $('#finJuego').hide();
+            });
+        
+            $('#btn-comenzar').on('click', function(e){
+                $('#tarjeta1').hide();
+                tarjetaActualJ2=generarAleatorio();
+                mostrarImagen('tarjeta'+tarjetaActualJ2);
+                $(this).hide();
+                $('#btn-siJ2, #btn-noJ2').show();
+                comenzarJuego2();
+            });
+        
+            $('#btn-siJ2, #btn-noJ2').on('click',function(e){
+                var boton=$(this).attr('id');
+                if (tarjetaActualJ2==tarjetaAnteriorJ2 && boton=="btn-siJ2"){
+                    aciertos++;
+                    $('#tBienJ2').toast('show');
+                }
+                else if (tarjetaActualJ2!=tarjetaAnteriorJ2 && boton=="btn-noJ2"){
+                    aciertos++;
+                    $('#tBienJ2').toast('show');
+                }
+                else {
+                    $('#tMalJ2').toast('show');
+                }
+                tarjetaAnteriorJ2=tarjetaActualJ2;
+                tarjetaActualJ2=generarAleatorio();
+                setTimeout(function() {
+                    ocultarImagen();
+                    mostrarImagen('tarjeta'+tarjetaActualJ2);
+                },300);
+                numero++;
+            });
+        
+            $('.continuar-test').on('click',function(e){
+                window.parent.scrollSeccion($(this).attr('href'));
+            })
+        
+            function generarAleatorio () {
+                return (Math.floor((Math.random() * 4) + 1));
+            }
+        
+            function mostrarImagen (nombre) {
+                $('#tarjeta').show();
+                setTimeout(function(){
+                    $('#tarjeta').hide();    
+                    $('#'+nombre).show();
+                },250);
+            };
+
+            function ocultarImagen (nombre) {
+                $('#tarjeta1').hide();
+                $('#tarjeta2').hide();
+                $('#tarjeta3').hide();
+                $('#tarjeta4').hide();
+            };
+        
+            function comenzarJuego2() {
+            	var tiempo=setInterval(function(){
+                    audio = new Audio("recursos/tic.mp3")
+                    if (segundos>0){
+                        if (segundos==20 || segundos==15 || segundos==10 || segundos<6) {
+                            audio.pause();
+                            audio.play();
+                        }
+                        $('#tiempoJ2').html("Tiempo: "+segundos+" seg");
+                    }
+                    else if (segundos==0){
+                    	$('#tiempoJ2').html("Se acabo el tiempo");
+                        finJuego2();
+                        segundos=30;
+                        clearInterval(tiempo);
+                    }
+                    segundos=segundos-1;
+                },1000);
+            }
+        
+            function finJuego2 () {
+                $('#controles').hide();
+                $("#puntuacionJ2").html("Tuviste "+ aciertos +" aciertos de "+ numero +" posibles");
+                $('#finJuego').show();
+            }
+    </script>    
+</body>
+</html>
