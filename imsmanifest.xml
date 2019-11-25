@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:imsmd="http://ltsc.ieee.org/xsd/LOM" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" identifier="MANIFEST-C31A7C856AE74F83E8B75A8F108824E6" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd http://ltsc.ieee.org/xsd/LOM lom.xsd http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd">
+  <organizations default="equa">
+    <organization identifier="equa" structure="hierarchical">
+        <title>Cuestionario HONEY-ALONSO de estilos de aprendizaje</title>
+        <item identifier="chaea" isvisible="true" identifierref="pipfiles">
+            <title>Cuestionario</title>
+        </item>
+        <item identifier="resultadoschaea" isvisible="true" identifierref="resultadosFiles">
+            <title>Preferencias de aprendizaje</title>
+        </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="pipfiles" type="webcontent" adlcp:scormtype="sco" href="index.html">
+      <file href="index.html" />
+    </resource>
+    <resource identifier="resultadosFiles" type="webcontent" adlcp:scormtype="sco" href="resultados.php">
+      <file href="resultados.php" />
+      <file href="./js/SCORM_API_wrapper.js" />
+    </resource>
+  </resources>
+</manifest>
+
