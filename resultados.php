@@ -13,19 +13,6 @@
 
   </head>
   <body class="text-white" >
-      <?php
-            require_once('../config.php');
-            global $USER;
-            $userid=$USER->id;
-        $usuario="root";
-        $contrasena="Equa2019";
-        //$servidor="192.68.185.121:3306";
-        $servidor="localhost";
-        $basededatos="moodle";
-        $conexion= mysqli_connect($servidor,$usuario,$contrasena) or die ("No se ha podido conectar servidor");
-        $db = mysqli_select_db($conexion, $basededatos) or die("Error al seleccionar la BD");
-        $consulta= "SELECT * FROM moodle.mdl_user_info_data";
-        ?>
       
     <!-- MENÚ style="overflow:hidden;"
     <div class="container-fluid navbar-fixed-top">
@@ -419,72 +406,6 @@
           $('#analisisEstilos').append(cadenaInfoEstilo);
       });
       </script>
-    <?php
-      if ($respuestasActivo==0 && $respuestasReflexivo==0 && $respuestasTeorico==0 && $respuestasPragmatico==0) {
-          //echo("Error ceros");
-      }
-      else {
-          switch (sizeof($cadenaE)){
-              case 1:
-                  $EstiloUnidad1="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '3', '".$cadenaE[0]."', '0')";
-                  $EstiloUnidad2="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '4', '".$cadenaE[0]."', '0')";
-                  $EstiloUnidad3="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '5', '".$cadenaE[0]."', '0')";
-                  $EstiloUnidad4="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '6', '".$cadenaE[0]."', '0')";
-                  $EstiloUnidad5="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '7', '".$cadenaE[0]."', '0')";
-                  break;
-              case 2:
-                  $aleatorioU=rand(0,1);
-                  $EstiloUnidad1="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '3', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,1);
-                  $EstiloUnidad2="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '4', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,1);
-                  $EstiloUnidad3="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '5', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,1);
-                  $EstiloUnidad4="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '6', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,1);
-                  $EstiloUnidad5="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '7', '".$cadenaE[$aleatorioU]."', '0')";
-                  break;
-              case 3:
-                  $aleatorioU=rand(0,2);
-                  $EstiloUnidad1="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '3', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,2);
-                  $EstiloUnidad2="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '4', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,2);
-                  $EstiloUnidad3="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '5', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,2);
-                  $EstiloUnidad4="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '6', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,2);
-                  $EstiloUnidad5="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '7', '".$cadenaE[$aleatorioU]."', '0')";
-                  break;
-              case 4:
-                  $aleatorioU=rand(0,3);
-                  $EstiloUnidad1="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '3', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,3);
-                  $EstiloUnidad2="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '4', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,3);
-                  $EstiloUnidad3="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '5', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,3);
-                  $EstiloUnidad4="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '6', '".$cadenaE[$aleatorioU]."', '0')";
-                  $aleatorioU=rand(0,3);
-                  $EstiloUnidad5="INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '7', '".$cadenaE[$aleatorioU]."', '0')";
-                  break;
-          }
-              
-          //$resultado = mysqli_query($conexion, $consulta) or die ("error en la consulta");
-          $insertarEstilo= "INSERT INTO mdl_user_info_data (userid, fieldid, data, dataformat) VALUES ('".$userid."', '1', '".$estilosPreferidos."', '0')";
-          $cerrarSesion= "DELETE FROM mdl_sessions WHERE (userid = '".$userid."')";
-          //mysqli_query($conexion, $insertarEstilo) or die ("alert('Error en la asignación de estilo, el usuario ya tiene estilos registrados');");
-          mysqli_query($conexion, $EstiloUnidad1);
-          mysqli_query($conexion, $EstiloUnidad2);
-          mysqli_query($conexion, $EstiloUnidad3);
-          mysqli_query($conexion, $EstiloUnidad4);
-          mysqli_query($conexion, $EstiloUnidad5);
-          
-          mysqli_query($conexion, $insertarEstilo);
-          mysqli_query($conexion, $cerrarSesion);
-      }
-      mysqli_close( $conexion );
-    ?>
       <script>
           //location.reload();
               //var idUsuario = <?= $userid ?>;
